@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<!-- This is a comment 
+purpose: HW 7 Forms
+student: CNIT 132 Irina Golovko
+date: 14/04/2018 -->
+<title>Student Irina Golovko - HW7 Forms</title>
+<meta name="description" content="Forms">
+<meta charset="UTF-8">
+
+<!-- scripts needed for datepicker -->
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+<script>
+
+/* Datepicker jQuery code */
+
+$(function() {
+$( "#datepicker" ).datepicker();
+});
+
+function Validate()
+{
+// create messages
+	var msg1 = "Please enter your name";
+	var msg2 = "Please enter valid email address";
+	var msg3 = "Please enter any comments";
+	var msg4 = "Please enter state where do you live now";
+
+// create variables to hold form data entered by user
+// Note the syntax: from this document
+// get the value entered of a particular id variable (name, email, comment)
+
+	var name1 = document.getElementById("name").value;
+	var email1 = document.getElementById("email").value;
+	var comments1= document.getElementById("comments").value;
+	var state1= document.getElementById("state").value;
+	
+// check for any space characters that may be input  	    
+  if (name1 == "" || name1 == null)
+	{          	
+		alert (msg1);
+  	    return false;
+	}          
+
+if (email1 == "" || email1 == null)
+  	{          	
+        alert (msg2);
+  	    return false;
+    }     
+
+if (state1 == "" || state1 == null)
+	{          	
+		alert (msg4);
+		return false;
+	} 
+	   
+if (comments1 == "" || comments1 == null)
+ 	{     
+		alert (msg3);
+		return false;
+	}        
+}
+</script>
+
+<style>
+body 
+{
+	font-family: Arial;
+    background-image: url('mix.jpg');
+    text-align:center; 
+}
+
+#imgHT
+{
+	width: 88px;
+	height: 31px;
+	border: 0;
+}
+
+#imgCS
+{
+	width: 88px;
+	height: 31px;
+	border: 0;
+}
+
+address 
+{
+	font-size: 12pt;
+	text-align: center;
+}
+
+footer
+{
+	font-style: italic; 
+	color: #000000;
+}
+
+a.footer
+{
+	text-decoration: underline;
+	color: #0000ff;
+}
+
+.content {
+	width:700px;
+	margin: 0px auto; 
+	padding: 12px;
+    text-align: left; 	
+	background-color:#FCF3CF;
+}    
+
+.top  {
+	margin: 2px auto; 
+	padding: 8px;
+	width: 500px; 
+	border: 1px solid; 
+	padding: 5px; 
+	background-color: #FCF3CF; 
+    font-size: 14px; 
+	font-style: italic; 
+	font-weight: bold;
+	text-align: justify;
+}
+
+.s {
+     font-size: 8pt;
+}    
+
+.req 
+     {
+     background-color: #48C9B0;
+} 
+
+td.tab  {
+	font-size: 10pt;  
+	padding: 3px;
+}
+
+.f {
+     font-size: 12pt;
+     font-weight: bold;
+     color: blue; 
+	 font-family: Impact;
+} 
+
+#hdr {
+	font-family: Verdana;
+	font-size: 30px;
+	font-weight: bold;
+	font-style: italic;
+	color: blue;
+    text-align: center;
+    text-shadow: 4px 4px 4px white;
+}
+
+.pi {
+	font-weight: bold;
+	font-style: italic;
+}
+
+</style>
+
+</head>
+
+<body>
+<header>
+<h2 id="hdr">Feedback Form</h2>
+
+<p class="top">Thank you for your interest.
+Please fill out the following form, and then click the submit button.
+Name, email, and comments are <span class="req">required</span>, as<span class="req">indicated by the *</span>. The information that you enter 
+will open an email with your filled information in it.
+Click send it to email.</p>
+</header>
+<br>
+
+<div class="content">
+
+<form action="mailto:igolovko@mail.ccsf.edu" method="post" name="myform" id="myform"  autocomplete="on" enctype="text/plain">
+
+
+<fieldset>
+<legend class="f">Contact Information</legend>
+
+<table>
+<tr>
+<td class="pi">Name: *</td><td><input type="text" size="45" maxlength="50" name="name" id="name" required autofocus></td>
+</tr>
+<tr>
+
+<td class="pi">Email Address: *</td><td><input type="email" size="45" maxlength="50" id="email" required name="email"></td>
+</tr>
+
+<tr>
+<td class="pi">Phone: </td><td><input type="text" size="20" maxlength="25" id="phone"></td>
+</tr>
+
+<tr>
+<td class="pi">Region(state): *</td><td><input type="text" size="20" maxlength="50" id="state"></td>
+</tr>
+</table>
+</fieldset>
+<br>
+
+<p class="pi">My Occupation: 
+<select name="ocupation">
+<option value=" ">-Choose one-</option>
+<option value="student">Student</option>
+<option value="teacher">Teacher</option>
+<option value="it_job">IT job</option>
+<option value="programmer">Programmer</option>
+<option value="lawyer">Lawyer</option>
+<option value="accountant">Accountant</option>
+<option value="administrator">Administrator</option>
+<option value="scientist">Scientist</option>
+<option value="manager">Manager</option>
+<option value="customer_service">Customer Service</option>
+<option value="hr">HR</option>
+<option value="agent">Agent</option>
+<option value="medical_staff">Medical Staff</option>
+<option value="other">Other</option>
+</select>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+My Political Party: 
+<select name="party">
+<option value=" ">-Choose one-</option>
+<option value="democrat">Democrat</option>
+<option value="republican">Republican</option>
+<option value="green">Green</option>
+<option value="independent">Independent</option>
+<option value="other">Other</option>
+</select>
+</p>
+<br>
+
+<p class="pi">You are interested in: <span class="s">(Choose only one)</span></p>
+<table>
+<tr>
+<td class="tab"><input type="radio" name="buy_or_lease" value="buying_a_car" checked>buying a car</td>
+<td class="tab"><input type="radio" name="buy_or_lease"  value="lease_a_car">lease a car</td>
+</tr>
+</table>
+<br>
+
+<p class="pi">Your Auto Insurance Company: <span class="s">(Choose only one)</span>
+</p>
+<table>
+<tr>
+<td class="tab"><input type="radio" name="insurance" value="State_farm" checked>State Farm</td>
+<td class="tab"><input type="radio" name="insurance"  value="Geico">Geico</td>
+<td class="tab"><input type="radio" name="insurance" value="Allstate">Allstate</td>
+</tr>
+
+<tr>
+<td class="tab"><input type="radio" name="insurance"  value="Progressive_Corporation">Progressive Corporation</td>	
+<td class="tab"><input type="radio" name="insurance" value="USAA">USAA</td>
+<td class="tab"><input type="radio" name="insurance"  value="Farmers_Insurance_Group">Farmer Insurance Group</td>		
+</tr>
+
+<tr>
+<td class="tab"><input type="radio" name="insurance"  value="American_Family">American Family</td>
+<td class="tab"><input type="radio" name="insurance" value="Travelers">Travelers</td>
+<td class="tab"><input type="radio" name="insurance" value="AAA">AAA</td>
+</tr>
+
+<tr>
+<td class="tab"><input type="radio" name="insurance"  value="Mercury_Insurance_group">Mercury Insurance Group</td>
+<td class="tab"><input type="radio" name="insurance" value="Other">Other</td>	
+<td class="tab"><input type="radio" name="insurance" value="None">None</td>	
+</tr>
+</table>
+<br>
+
+<p class="pi">You would like to have a: <span class="s">(Choose all that apply)</span></p>
+<table>
+<tr>
+<td class="tab"><input type="checkbox"  name="interest" value="volkswagen_beetle" checked>Volkswagen Beetle</td>
+<td class="tab"><input type="checkbox"  name="interest" value="volkswagen_passat_cc">Volkswagen Passat CC</td>
+<td class="tab"><input type="checkbox"  name="interest" value="volkswagen_golf">Volkswagen Golf</td>
+<td class="tab"><input type="checkbox"  name="interest" value="volkswagen_jetta">Volkswagen Jetta</td>
+</tr>
+
+<tr>
+<td class="tab"><input type="checkbox" name="interest"  value="audi_a4">Audi A4</td>
+<td class="tab"><input type="checkbox"  name="interest" value="bmw_5">BMW 5</td>
+<td class="tab"><input type="checkbox"  name="interest" value="bmw_3">BMW 3</td>
+<td class="tab"><input type="checkbox"  name="interest" value="mini_cooper">Mini Cooper</td>
+</tr>
+
+<tr>
+<td class="tab"><input type="checkbox"  name="interest" value="porsche">Porscher</td>	
+<td class="tab"><input type="checkbox"  name="interest" value="alfa_romeo">Alfa Romeo</td>
+<td class="tab"><input type="checkbox"  name="interest" value="maserati">Maserati</td>
+<td class="tab"><input type="checkbox"  name="interest" value="bentley">Bentley</td>
+</tr>
+
+<tr>
+<td class="tab"><input type="checkbox"  name="interest" value="mercedes_benz_c-class">Mercedes-Benz C-Class</td>
+<td class="tab"><input type="checkbox"  name="interest" value="volovo_s80">Volvo S80</td>
+<td class="tab"><input type="checkbox"  name="interest" value="volovo_s80">Toyota</td>	
+<td class="tab"><input type="checkbox"  name="interest" value="volovo_s80">Mazda</td>
+</tr>
+</table>
+<br>
+
+<p class="pi">Comments/Questions*
+
+<textarea id="comments" rows="6" cols="71"></textarea><br><br>
+Today's Date:
+<input type="text" id="datepicker" name="todays_date" value="click here" size="8">
+</p>
+<br>
+
+<input type="submit" value="SUBMIT"  onclick="return Validate(this.form)">
+
+<!-- 
+the above code, when the user clicks the submit button,
+will activate the javascript function named Validate, pass to it the form data entered by the user (this.form),
+and return values of true or false from the function's if tests...all return of true means the form mailto will activate
+-->
+
+<input type="reset" value="RESET">
+</form>
+</div>
+<br>
+
+<footer>	
+<address>
+Irina Golovko<br>
+Email: <a class="footer" href="mailto:igolovko@mail.ccsf.edu">igolovko@mail.ccsf.edu</a>
+</address>
+Copyright &copy; Irina Golovko, 2018
+
+<script>
+var dateModified = document.lastModified;
+mydate = dateModified.slice(0,16);
+document.write("| Last updated: " + mydate); 	
+</script>
+
+<a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fhills.ccsf.edu%2F%7Eigolovko%2Fcnit132%2FHW7%2Fhw7_1.html"
+target="_blank">
+<img src="https://www.w3.org/html/logo/downloads/HTML5_Logo_256.png" 
+id="imgHT" alt="HTML5"></a>
+
+<a href="https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fhills.ccsf.edu%2F%7Eigolovko%2Fcnit132%2FHW7%2Fhw7_1.html&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en" 
+target="_blank">
+<img src="http://jigsaw.w3.org/css-validator/images/vcss" 
+id="imgCS" alt="Valid CSS!"></a>
+
+</footer>
+
+</body>
+
+</html>

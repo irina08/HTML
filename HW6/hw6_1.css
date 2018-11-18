@@ -1,0 +1,268 @@
+body 
+{
+	font-family: Arial;
+    background-color: #e6fff5; 
+    text-align:center; 
+}
+	
+div.abs {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+div.name {
+    position: absolute;
+    left: 40%;
+	top: 8%;
+	text-align: center;
+	font-size: 36px;
+	color: white;
+	font-weight: bold;
+	font-style:italic;
+	text-shadow: 12px 12px 12px #000;
+	text-align: center;
+	z-index: 1;
+}
+
+img.L {
+    width: 120px;
+    height: 70px;
+}
+
+img.B {
+	position: absolute;
+	left: 0px;
+	right: 20px;
+    height: 150px;
+    width: 100%;
+	z-index: -1;
+}
+
+ul.h {
+	 list-style-type: none;
+	 margin: 0px;
+	 padding: 0px;
+	 overflow: hidden;	 
+}
+
+li.h {
+	float: left;
+	display: inline;
+	margin: 8px;
+	font-weight: bold;
+	font-size: 20px;
+	text-shadow: 10px 10px 10px #000;
+}
+
+li.h a { 
+	color: white; 	
+}
+
+div.top_right {
+    position: absolute;
+	top: 10px;
+    left: 780px;
+}
+
+a {text-decoration: none;}
+
+a:hover { 
+text-decoration: none;
+background-color: #f4a460;
+}
+
+#imgHT
+{
+	position: absolute;
+	bottom: 40px;
+	left: 170px;
+	width: 70px;
+	height: 50px;
+	border: 0;
+}
+
+#imgCS
+{
+	position: absolute;
+	bottom: 40px;
+	left: 250px;
+	width: 80px;
+	height: 40px;
+	border: 0;
+}
+
+
+#imgLS
+{
+	position: absolute;
+	top: 480px;
+	left: 60px;
+	border: 0;
+	z-index: 1;
+}
+
+#imgSF
+{
+	position: absolute;
+	top: 370px;
+	left: 60px;
+	border: 0;
+	width: 100px;
+	height: 70px;
+	z-index: 1;
+}
+
+address 
+{
+	font-size: 12pt;
+	text-align: center;
+}
+
+div.footer
+{
+	position: absolute;
+	left: 80px;
+	right: 0px;
+	bottom: 5px;	
+	font-style: italic; 
+	color: #000000;
+	text-align: center;
+	z-index: -1;
+}
+
+a 
+{ 
+	text-decoration: none;
+	color: #0000ff;
+}
+
+a.footer
+{
+	text-decoration: underline;
+}
+
+#divbackground {
+ position:absolute;
+ left:0px;
+ right:0px;
+ top:150px;
+ z-index:-1;
+ background-image:url('images/tpeaks.jpg');
+ background-repeat:repeat-y;
+ width:75px;
+ height:520px;
+}
+
+#nat {
+position: absolute;
+top: 180px;
+left: 170px;
+}
+
+table.routes {
+font-size: 12px;
+background-color: #f5f5dc;
+border: 1px solid black; padding: 2px;
+}
+
+.SFr {
+font-size: 16px; 
+font-weight: bold;
+color: black;
+text-shadow: -1px 0 yellow, 0 1px yellow, 1px 0 yellow, 0 -1px yellow;
+}
+
+td.routes {background-color: #ffffff;}
+
+#AllT {
+position: absolute;
+top: 395px;
+left: 485px;
+z-index: 1;
+border-radius: 25px;
+padding: 0px; 
+width: 100px;
+background: yellow;
+}
+
+#AllB {
+position: absolute;
+top: 350px;
+left: 200px;
+z-index: 1;
+border-radius: 25px;
+padding: 0px; 
+width: 200px;
+background: yellow;
+}
+
+#flag {
+position: absolute;
+top: 435px;
+left: 680px;
+z-index: 1;
+padding: 0px; 
+width: 250px;
+background: yellow;
+box-shadow: 3px 8px;
+}
+
+div.b {
+border: dotted 3px #000000;
+padding: 0px;
+background-color: #abebc6;
+}
+
+#box1 {
+position: absolute; 
+top: 415px; 
+left: 420px; 
+width: 220px;	
+}
+	 
+#box2 {
+	 position: absolute; 
+	 top: 370px; 
+	 left: 180px; 
+	 width: 220px;	
+}	 
+
+#beach {
+	 position: absolute;
+	 top: 180px;
+	 left: 670px;
+}
+	 
+p.text {
+font-size: 10pt;
+text-align: justify;
+}
+
+a.all {
+text-decoration: none;
+color: black;		
+}
+
+a.all:hover { 
+background-color: transparent;
+}
+
+#imgflag {
+	position: absolute;
+	top: 480px;
+	left: 720px;
+	z-index: -1;
+	width: 120px;
+	height: 80px;
+}
+
+#imgMayor {
+	position: absolute;
+	top: 520px;
+	left: 815px;
+	right: 0px;
+	z-index: 1;
+	width: 60px;
+	height: 80px;
+}

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<!-- This is a comment 
+purpose: HW 5 Multimedia (animation page)
+student: CNIT 132 Irina Golovko
+date: 03/17/2018 -->
+<title>Student Irina Golovko - HW5 Multimedia - animation</title>
+<meta name="description" content="animation for Multimedia class CNIT132.">
+<meta charset="UTF-8">
+
+<style>
+
+body 
+{
+	font-family: Arial;
+     background-image: url('blue.png');
+     margin: 10px 0px; 
+	 padding: 0px;
+     text-align:center; 
+}
+
+#imgHT
+{
+	width: 88px;
+	height: 31px;
+	border: 0;
+}
+
+#imgCS
+{
+	width: 88px;
+	height: 31px;
+	border: 0;
+}
+
+address 
+{
+	font-size: 12pt;
+	text-align: center;
+}
+
+footer
+{
+	font-style: italic; 
+	color: #000000;
+}
+
+#hdr 
+{
+	font-size: 24pt;
+	font-style: italic;
+	color: #ffffff;
+	text-shadow: 18px 18px 18px #000;
+	text-align: center;
+}
+
+#content 
+{  
+	margin: 0px auto; 
+	background: #f5f5dc;  
+	width: 400px; 
+	border: 0px; 
+	padding: 20px 20px 20px 20px; 
+	border-radius: 20px;  
+	text-align: center;
+}
+
+h2 
+{
+	font-size: 14pt; 
+	font-family: Arial; 
+	font-style: italic;
+	font-weight: bold;
+}
+
+table.main
+{
+	width: 430px;
+	height: 100%;
+}
+/* CSS animation */
+.loader {
+  border: 10px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 10px solid blue;
+  border-right: 10px solid green;
+  border-bottom: 10px solid red;
+  border-left: 10px solid yellow;
+  width: 50px;
+  height: 50px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin 
+{
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin 
+{
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.div100
+{
+width:40px;
+height:40px;
+background:blue;
+position:relative;
+animation-name:second;
+animation-duration:5s;
+animation-timing-function:linear;
+animation-delay:2s;
+animation-iteration-count:infinite;
+animation-direction:alternate;
+animation-play-state:running;
+/* Safari and Chrome: */
+-webkit-animation-name:second;
+-webkit-animation-duration:5s;
+-webkit-animation-timing-function:linear;
+-webkit-animation-delay:2s;
+-webkit-animation-iteration-count:infinite;
+-webkit-animation-direction:alternate;
+-webkit-animation-play-state:running;
+}
+
+@keyframes second
+{
+0%   {background:blue; left:0px; top:0px;}
+25%  {background:yellow; left:300px; top:0px;}
+50%  {background:green; left:300px; top:100px;}
+75%  {background:red; left:0px; top:100px;}
+100% {background:blue; left:0px; top:0px;}
+}
+
+@-webkit-keyframes second /* Safari and Chrome */
+{
+0%   {background:blue; left:0px; top:0px;}
+25%  {background:yellow; left:300px; top:0px;}
+50%  {background:green; left:300px; top:100px;}
+75%  {background:red; left:0px; top:100px;}
+100% {background:blue; left:0px; top:0px;}
+}
+</style>
+
+</head>
+
+<body>
+	
+<header>
+<h4 id="hdr">Animation</h4>
+</header>
+
+<section id="content">
+<div class="div100"></div>
+<br>
+<p>Note: This example does not work in IE 9 
+and earlier versions.</p>
+<h2>CSS3 Animation</h2>
+<br>
+<table class="main">
+<tr>
+<td class="loader"></td>
+<td>Created animation</td>
+<td><img src="pic.gif" width="80"  height="80" 
+alt="animation created using Animation Shop"></td>
+</tr>
+</table>
+<br>
+<form>
+<input type="button" value="Close Window" onclick="window.close()">	
+</form>
+
+</section>
+
+<br><br>
+<footer>
+<address>
+Irina Golovko<br>
+Email: <a href="mailto:igolovko@mail.ccsf.edu">igolovko@mail.ccsf.edu</a>
+</address>
+<br>
+<a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fhills.ccsf.edu%2F~igolovko%2Fcnit132%2FmyAnimation.html"
+target="_blank">
+<img src="https://www.w3.org/html/logo/downloads/HTML5_Logo_256.png" 
+id="imgHT" alt="HTML5"></a>
+
+<a href="https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fhills.ccsf.edu%2F~igolovko%2Fcnit132%2FmyAnimation.html&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en" 
+target="_blank">
+<img src="http://jigsaw.w3.org/css-validator/images/vcss" 
+id="imgCS" alt="Valid CSS!"></a>
+<br>
+<br>
+Copyright &copy; Irina Golovko, 2018
+
+<script>
+var dateModified = document.lastModified;
+mydate = dateModified.slice(0,16);
+document.write("| Last updated: " + mydate); 	
+</script>
+</footer>
+
+</body>
+
+</html>

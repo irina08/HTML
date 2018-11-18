@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<!-- This is a comment 
+purpose: HW 6 Cascading Style Sheet II
+student: CNIT 132 Irina Golovko
+date: 04/08/2018 -->
+<title>Student Irina Golovko - HW6 Cascading Style Sheets II</title>
+<meta name="description" content="Cascading Style Sheets II">
+<meta charset="UTF-8">
+<link rel="stylesheet" href="hw6_1.css">
+</head>
+
+<body class="center">  
+
+<div id="divbackground"></div> 
+
+<header>	
+<img class="B" src="images/banner/panorama.jpg" alt="San Francisco">
+
+<div class="abs">
+<img class="L" src="images/logo/h2.png" alt="Logo">
+</div>
+
+<div class="name">
+San Francisco 
+</div>
+
+<div class="top_right">
+<ul class="h">
+<li class="h"><a href="#" onclick="window.open('https://www.gismeteo.com/city/daily/14240/', 'newwindow', 
+'width=700,height=550'); 
+return false;">Weather</a></li> 
+<li class="h"><a href="#" onclick="window.open('https://www.google.com/maps/@37.7749504,-122.4925184,15z', 'newwindow', 
+'width=700,height=550'); 
+return false;">Map</a></li> 
+</ul>
+ </div>
+</header>
+
+<img onmouseover="bigImg2(this)" onmouseout="normalImg2(this)"
+src="images/lbig.jpg" id="imgLS" title="Lombard Street"
+alt="Lombard Street">
+
+<script>
+function bigImg2(x) {
+    x.style.height = "200px";
+    x.style.width = "150px";
+}
+
+function normalImg2(x) {
+    x.style.height = "80px";
+    x.style.width = "70px";
+}
+</script>
+
+<img onmouseover="bigImg1(this)" onmouseout="normalImg1(this)"
+src="images/sf.jpg" id="imgSF" title="Streets in San Francisco" 
+alt="Streets in San Francisco">
+
+<script>
+function bigImg1(x) {
+    x.style.height = "150px";
+    x.style.width = "200px";
+}
+
+function normalImg1(x) {
+    x.style.height = "70px";
+    x.style.width = "100px";
+}
+</script>
+
+<div id="nat">
+<table class="routes" style="width:450px">
+<caption class="SFr">5 Best San Francisco Running Routes </caption>
+<tr>
+<th>Route</th>
+<th>Location</th>
+</tr>
+
+<tr>
+<td class="routes">Crissy Field to Hopper’s Hands</td>
+<td class="routes">Marina/Presidio</td>
+</tr>
+
+<tr>
+<td class="routes">Golden Gate Park</td>
+<td class="routes">Upper Haight/Richmond/Sunset</td>
+</tr>
+
+<tr>
+<td class="routes">Embarcadero</td>
+<td class="routes">Financial District/North Beach/Fisherman’s Wharf</td>
+</tr>
+
+<tr>
+<td class="routes">Twin Peaks</td>
+<td class="routes">Haight/Castro/Noe Valley/Sunset</td>
+</tr>
+
+<tr>
+<td class="routes">McLaren Park</td>
+<td class="routes">Excelsior/Portola</td>
+</tr>
+</table>
+</div>
+
+<div id="beach">
+<table class="routes" style="width:250px">
+<caption class="SFr">Best San Francisco Beaches</caption>
+<tr>
+<th>Beach</th>
+<th>Location</th>
+</tr>
+
+<tr>
+<td class="routes">Crissy Field</td>
+<td class="routes">Presidio</td>
+</tr>
+
+<tr>
+<td class="routes">Ocean Beach</td>
+<td class="routes">Outer Richmond</td>
+</tr>
+
+<tr>
+<td class="routes">Backer Beach</td>
+<td class="routes">Presidio</td>
+</tr>
+
+<tr>
+<td class="routes">Quarry Beach</td>
+<td class="routes">Angel Island</td>
+</tr>
+
+<tr>
+<td class="routes">China Beach</td>
+<td class="routes">Seacliff</td>
+</tr>
+
+<tr>
+<td class="routes">Fort Funston</td>
+<td class="routes">Lake Merced</td>
+</tr>
+
+<tr>
+<td class="routes">Mile Rock Beach</td>
+<td class="routes">Outer Richmond</td>
+</tr>
+
+<tr>
+<td class="routes">Marshall's Beach</td>
+<td class="routes">Presidio</td>
+</tr>
+
+<tr>
+<td class="routes">Thornton State Beach</td>
+<td class="routes">Lake Merced</td>
+</tr>
+
+<tr>
+<td class="routes">Perles Beach</td>
+<td class="routes">Tiburon</td>
+</tr>
+
+</table>
+</div>
+
+<div id="AllT">
+<a class="all" href="https://www.alltrails.com" target="_blank">AllTrails</a>
+</div>
+
+<div class="b" id="box1">
+<p class="text">AllTrails helps people explore the outdoors with the largest 
+collection of detailed, hand-curated trail maps as well as trail reviews and 
+photos crowdsourced from a community of 6 million registered hikers, mountain 
+bikers and trail runners.
+</p>
+</div>
+
+<div id="AllB">
+<a class="all" 
+href="https://www.encyclopedia.com/places/united-states-and-canada/us-political-geography/san-francisco" 
+target="_blank">About San Francisco</a>
+</div>
+
+<div class="b" id="box2">
+<p class="text">San Francisco is a uniquely city, whose scenic 
+attractions include the largest park in the country, 
+Golden Gate Park. It's notoriously steep streets, traversed by the famous 
+cable cars, are home to a remarkably diverse ethnic population. 
+Today the Bay Area is also famous for its concentration of high-technology 
+firms.</p>
+</div>
+
+<div id="flag">
+<a class="all" 
+href="https://en.wikipedia.org/wiki/Flag_of_San_Francisco" 
+target="_blank">City and County of San Francisco</a>
+</div>
+
+<a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fhills.ccsf.edu%2F%7Eigolovko%2Fcnit132%2FHW6%2Fhw6_1.html"
+target="_blank">
+<img src="https://www.w3.org/html/logo/downloads/HTML5_Logo_256.png" 
+id="imgHT" alt="HTML5"></a>
+
+
+<a href="https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fhills.ccsf.edu%2F%7Eigolovko%2Fcnit132%2FHW6%2Fhw6_1.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en" 
+target="_blank">
+<img src="http://jigsaw.w3.org/css-validator/images/vcss" 
+id="imgCS" alt="Valid CSS!"></a>
+
+<img id="imgflag" src="images/flag.png" alt="San Francisco flag">
+
+<img id="imgMayor" src="images/mayor.jpg" alt="San Francisco Mayor">
+
+<div class="footer">
+<address>
+Irina Golovko<br>
+Email: <a class="footer" href="mailto:igolovko@mail.ccsf.edu">igolovko@mail.ccsf.edu</a>
+</address>
+<br>
+Copyright &copy; Irina Golovko, 2018
+
+<script>
+var dateModified = document.lastModified;
+mydate = dateModified.slice(0,16);
+document.write("| Last updated: " + mydate); 	
+</script>
+</div>
+
+</body>
+
+</html>

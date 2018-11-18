@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<!-- This is a comment 
+purpose: HW 8 Form Processing using PHP
+student: CNIT 132 Irina Golovko
+date: 28/04/2018 -->
+<title>Student Irina Golovko - HW8 Form Processing using PHP</title>
+<meta name="description" content="Forms">
+<meta charset="UTF-8">
+
+<!-- scripts needed for datepicker -->
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+<script>
+
+/* Datepicker jQuery code */
+
+$(function() {
+$( "#datepicker" ).datepicker();
+});
+
+function Validate()
+{
+// create messages
+	
+var errMsg = "<span style='font-weight: bold; color: red; font-size: 10px;'>&nbsp;&nbsp;&nbsp;Name is required</span>";       
+var errMsg1 = "<span style='font-weight: bold; color: red; font-size: 10px;'>&nbsp;&nbsp;&nbsp;Email is required</span>";
+var errMsg2 = "<span style='font-weight: bold; color: red; font-size: 10px;'>&nbsp;&nbsp;&nbsp;State is required</span>";
+		
+var name1 = document.getElementById("name").value;
+var email1 = document.getElementById("email").value;
+var state1 = document.getElementById("state").value;	
+		
+// check for any space characters that may be input  	    
+  if (name1 == "" || name1 == null)
+	{          	
+		document.getElementById("nameErr").innerHTML = errMsg;        
+		return false;
+	}          
+
+if (email1 == "" || email1 == null)
+  	{          	
+		document.getElementById("emailErr").innerHTML = errMsg1;
+		document.getElementById("nameErr").innerHTML = "";
+  	    return false;
+    }     
+
+if (state1 == "" || state1 == null)
+	{          	
+		document.getElementById("stateErr").innerHTML = errMsg2;
+		document.getElementById("emailErr").innerHTML = "";
+		return false;
+	}    
+	
+	else
+	{
+	     document.getElementById("nameErr").innerHTML = "";
+	     document.getElementById("stateErr").innerHTML = "";
+	     document.getElementById("emailErr").innerHTML = "";       
+	} 
+}
+</script>
+
+<style>
+body 
+{
+	font-family: Arial;
+    background-image: url('mix.jpg');
+    text-align:center; 
+}
+
+#imgHT
+{
+	width: 88px;
+	height: 31px;
+	border: 0;
+}
+
+#imgCS
+{
+	width: 88px;
+	height: 31px;
+	border: 0;
+}
+
+address 
+{
+	font-size: 12pt;
+	text-align: center;
+}
+
+footer
+{
+	font-style: italic; 
+	color: #000000;
+}
+
+a.footer
+{
+	text-decoration: underline;
+	color: #0000ff;
+}
+
+.content {
+	width:700px;
+	margin: 0px auto; 
+	padding: 12px;
+    text-align: left; 	
+	background-color:#FCF3CF;
+}    
+
+.top  {
+	margin: 2px auto; 
+	padding: 5px;
+	width: 500px; 
+	border: 1px solid; 
+	padding: 5px; 
+	background-color: #FCF3CF; 
+    font-size: 14px; 
+	font-style: italic; 
+	font-weight: bold;
+	text-align: center;
+}
+
+.s {
+     font-size: 8pt;
+}    
+
+.req 
+     {
+     background-color: #48C9B0;
+} 
+
+td.tab  {
+	font-size: 10pt;  
+	padding: 3px;
+}
+
+.f {
+     font-size: 12pt;
+     font-weight: bold;
+     color: blue; 
+	 font-family: Impact;
+} 
+
+#hdr {
+	font-family: Verdana;
+	font-size: 30px;
+	font-weight: bold;
+	font-style: italic;
+	color: blue;
+    text-align: center;
+    text-shadow: 4px 4px 4px white;
+}
+
+.pi {
+	font-weight: bold;
+	font-style: italic;
+}
+
+</style>
+
+</head>
+
+<body>
+<header>
+<h2 id="hdr">Feedback Form</h2>
+
+<p class="top">Thank you for your interest to buy or lease car with our company.<br>
+Please fill out the following form, and then click the submit button.</p>
+</header>
+<br>
+
+<div class="content">
+<form action="carForm.php" method="post" autocomplete="on" name="myform">
+
+<fieldset>
+<legend class="f">Contact Information</legend>
+
+<div id="nameErr"></div>
+<div id="emailErr"></div>
+<div id="commErr"></div>
+
+<table>
+<tr>
+<td class="pi">Name: *</td><td><input type="text" size="45" maxlength="50" name="name" id="name" required autofocus></td>
+</tr>
+<tr>
+
+<td class="pi">Email Address: *</td><td><input type="email" size="45" maxlength="50" id="email" required name="email"></td>
+</tr>
+
+<tr>
+<td class="pi">Phone: </td><td><input type="text" size="20" maxlength="25" name="phone" id="phone"></td>
+</tr>
+
+<tr>
+<td class="pi">Region(state): *</td><td><input type="text" size="20" maxlength="50" name="state" id="state"></td>
+</tr>
+</table>
+</fieldset>
+
+<p class="pi">Your Occupation: 
+<input type="hidden" name="ocupation" value="">
+<select name="ocupation">
+<option value=" " selected="selected">-Choose one-</option>
+<option value="student">Student</option>
+<option value="teacher">Teacher</option>
+<option value="it_job">IT job</option>
+<option value="programmer">Programmer</option>
+<option value="lawyer">Lawyer</option>
+<option value="accountant">Accountant</option>
+<option value="administrator">Administrator</option>
+<option value="scientist">Scientist</option>
+<option value="manager">Manager</option>
+<option value="customer_service">Customer Service</option>
+<option value="hr">HR</option>
+<option value="agent">Agent</option>
+<option value="medical_staff">Medical Staff</option>
+<option value="other">Other</option>
+</select>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Your Gender: 
+<input type="hidden" name="gender" value="">
+<select name="gender">
+<option value=" " selected="selected">-Choose one-</option>
+<option value="male">Male</option>
+<option value="female">Female</option>
+<option value="other">Other</option>
+</select>
+</p>
+
+<p class="pi">Your Age:
+<input type="hidden" name="age" value="">
+<select name="age">
+<option value=" " selected="selected">-Choose one-</option>
+<option value="16-19">16-19</option>
+<option value="20-24">20-24</option>
+<option value="25-29">25-29</option>
+<option value="30-34">30-34</option>
+<option value="35-39">35-39</option>
+<option value="40-44">40-44</option>
+<option value="45-49">45-49</option>
+<option value="50-54">50-54</option>
+<option value="55-59">55-59</option>
+<option value="60-64">60-64</option>
+<option value="65-69">65-69</option>
+<option value="70-74">70-74</option>
+<option value="75-79">75 and up</option>
+</select>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+What was your interest: 
+<input type="hidden" name="buy_or_lease" value="">
+<select name="buy_or_lease">
+<option value=" " selected="selected">-Choose one-</option>
+<option value="buying_a_car">buying a car</option>
+<option value="lease_a_car">lease a car</option>
+</select>
+</p>
+
+<p class="pi">Were you satisfied with the customer service we provided for you?
+<span class="s">(Choose only one)</span>
+</p>
+<input type="hidden" name="cur_ser1" value="">
+<table>
+<tr>	
+<td class="tab"><input type="radio" name="cus_ser1" value="Yes">Yes</td>
+<td class="tab"><input type="radio" name="cus_ser1" value="No">No</td>
+<td class="tab"><input type="radio" name="cus_ser1" value="Somewhat">Somewhat</td>
+</tr>
+</table>
+
+<p class="pi">Was our customer service provided to you in accessible manner? 
+<span class="s">(Choose only one)</span>
+</p>
+<input type="hidden" name="cus_ser2" value="">
+<table>
+<tr>	
+<td class="tab"><input type="radio" name="cus_ser2" value="Yes">Yes</td>
+<td class="tab"><input type="radio" name="cus_ser2" value="No">No</td>
+<td class="tab"><input type="radio" name="cus_ser2" value="Somewhat">Somewhat</td>
+</tr>
+</table>
+
+<p class="pi">What kind of car(cars) did you buy or lease with us: <span class="s">
+(Choose all that apply)</span></p>
+<table>
+<tr>
+<td class="tab"><input type="hidden" name="interest1" value="">
+<input type="checkbox" name="interest1" value="volkswagen_beetle">
+Volkswagen Beetle</td>
+<td class="tab"><input type="hidden" name="interest2" value="">
+<input type="checkbox" name="interest2" value="volkswagen_passat_cc">
+Volkswagen Passat CC</td>
+<td class="tab"><input type="hidden" name="interest3" value="">
+<input type="checkbox" name="interest3" value="volkswagen_golf">Volkswagen Golf</td>
+<td class="tab"><input type="hidden" name="interest4" value="">
+<input type="checkbox" name="interest4" value="volkswagen_jetta">Volkswagen Jetta</td>
+</tr>
+
+<tr>
+<td class="tab"><input type="hidden" name="interest5" value="">
+<input type="checkbox" name="interest5"  value="audi_a4">Audi A4</td>
+<td class="tab"><input type="hidden" name="interest6" value="">
+<input type="checkbox" name="interest6" value="bmw_5">BMW 5</td>
+<td class="tab"><input type="hidden" name="interest7" value="">
+<input type="checkbox" name="interest7" value="bmw_3">BMW 3</td>
+<td class="tab"><input type="hidden" name="interest8" value="">
+<input type="checkbox" name="interest8" value="mini_cooper">Mini Cooper</td>
+</tr>
+
+<tr>
+<td class="tab"><input type="hidden" name="interest9" value="">
+<input type="checkbox" name="interest9" value="alfa_romeo">Alfa Romeo</td>
+<td class="tab"><input type="hidden" name="interest10" value="">
+<input type="checkbox" name="interest10" value="maserati">Maserati</td>
+<td class="tab"><input type="hidden" name="interest11" value="">
+<input type="checkbox"  name="interest11" value="mercedes_benz_c-class">
+Mercedes-Benz C-Class</td>
+<td class="tab"><input type="hidden" name="interest12" value="">
+<input type="checkbox" name="interest12" value="volovo_s80">Volvo S80</td>
+</tr>
+
+</table>
+
+<p class="pi">Comments</p>
+<textarea name="comments" id="comments" rows="6" cols="71"></textarea>
+
+<p class="pi">Today's Date:
+<input type="text" id="datepicker" name="todays_date" value="click here" size="8">
+
+</p>
+<input type="submit" value="SUBMIT" onclick="return Validate(this.form)">
+
+<!-- 
+the above code, when the user clicks the submit button,
+will activate the javascript function named Validate, pass to it the form data entered by the user (this.form),
+and return values of true or false from the function's if tests...all return of true means the form mailto will activate
+-->
+
+<input type="reset" value="RESET">
+</form>
+</div>
+<br>
+
+<footer>	
+<address>
+Irina Golovko<br>
+Email: <a class="footer" href="mailto:igolovko@mail.ccsf.edu">igolovko@mail.ccsf.edu</a>
+</address>
+Copyright &copy; Irina Golovko, 2018
+
+<script>
+var dateModified = document.lastModified;
+mydate = dateModified.slice(0,16);
+document.write("| Last updated: " + mydate); 	
+</script>
+
+<a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fhills.ccsf.edu%2F%7Eigolovko%2Fcnit132%2FHW8%2Fhw8_1.html"
+target="_blank">
+<img src="https://www.w3.org/html/logo/downloads/HTML5_Logo_256.png" 
+id="imgHT" alt="HTML5"></a>
+
+<a href="https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fhills.ccsf.edu%2F%7Eigolovko%2Fcnit132%2FHW8%2Fhw8_1.html&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en" 
+target="_blank">
+<img src="http://jigsaw.w3.org/css-validator/images/vcss" 
+id="imgCS" alt="Valid CSS!"></a>
+
+</footer>
+
+</body>
+
+</html>
